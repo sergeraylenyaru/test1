@@ -1,6 +1,6 @@
 (function(root){
 'use strict';
-const SIZE=7,TYPES=4;let serial=0;
+const SIZE=7,TYPES=6;let serial=0;
 const tile=(type=Math.floor(Math.random()*TYPES),special=null)=>({id:++serial,type,special});
 const adjacent=(a,b)=>a>=0&&b>=0&&a<SIZE*SIZE&&b<SIZE*SIZE&&Math.abs(Math.floor(a/SIZE)-Math.floor(b/SIZE))+Math.abs(a%SIZE-b%SIZE)===1;
 const swap=(b,a,c)=>{[b[a],b[c]]=[b[c],b[a]];};
